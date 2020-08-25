@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'register/sign_up'
   resources :payments
   resources :carts
   resources :products
