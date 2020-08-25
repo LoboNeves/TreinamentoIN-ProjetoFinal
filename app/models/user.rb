@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     has_secure_password #password_digest
+    has_many :product
     validates :name, :lastname, :password, :password_confirmation, presence: true
     validates :email, presence: true, uniqueness: true
     #Diferenciação dos tipos de usuário
