@@ -3,19 +3,19 @@ class ProductsController < ApplicationController
 
   # GET /products
   def index
-    @products = Product.all
+    if params[:search] #Sistema de busca de produtos
+      @products = Product.search(params[:search])
 
-    render json: @products
+    else
+      @products = Product.all
+
+      render json: @products
+    end
   end
 
   # GET /products/1
   def show
     render json: @product
-  end
-
-  def get_search
-    @products = product.search(params[:search])
-    render json: @products
   end
 
   # POST /products
