@@ -13,6 +13,11 @@ class ProductsController < ApplicationController
     render json: @product
   end
 
+  def get_search
+    @products = product.search(params[:search])
+    render json: @products
+  end
+
   # POST /products
   def create
     @product = Product.new(product_params)
