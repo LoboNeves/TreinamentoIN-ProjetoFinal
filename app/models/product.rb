@@ -5,4 +5,8 @@ class Product < ApplicationRecord
     def self.search(search)
         where("name LIKE ?", "%#{search}%")
     end
+
+    def self.filter(min_price, max_price)
+        where("price >= ? AND price <= ?", "%#{min_price.to_i}%", "%#{max_price.to_i}%")
+    end
 end

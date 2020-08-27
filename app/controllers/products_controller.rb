@@ -13,6 +13,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def filter_price #Sistema de filtro de preço
+    @products = Product.filter(params[:filter])
+  end
+
   # GET /products/1
   def show
     render json: @product
