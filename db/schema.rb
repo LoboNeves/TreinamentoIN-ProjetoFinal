@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_220929) do
     t.string "like"
     t.string "image"
     t.string "name"
-    t.string "price"
+    t.float "price"
     t.string "description"
     t.string "category"
     t.datetime "created_at", precision: 6, null: false

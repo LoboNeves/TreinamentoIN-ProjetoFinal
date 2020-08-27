@@ -7,6 +7,6 @@ class Product < ApplicationRecord
     end
 
     def self.filter(min_price, max_price)
-        where("price >= ? AND price <= ?", "%#{min_price.to_i}%", "%#{max_price.to_i}%")
+        where("price >= ? AND price <= ?", min_price, max_price)
     end
 end
