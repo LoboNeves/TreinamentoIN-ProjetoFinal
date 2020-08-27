@@ -13,6 +13,10 @@ class ProductsController < ApplicationController
     end
   end
 
+  def category_search #Busca por categoria
+    @products = Product.category_search(params[:search])
+  end
+
   def filter_price #Sistema de filtro de preço
     @products = Product.filter(params[:filter])
   end
