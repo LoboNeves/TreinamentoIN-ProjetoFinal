@@ -1,4 +1,5 @@
 class CreateCarts < ActiveRecord::Migration[6.0]
+  drop_table :carts
   def change
     create_table :carts do |t|
       t.string :name

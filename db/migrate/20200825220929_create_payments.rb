@@ -1,4 +1,5 @@
 class CreatePayments < ActiveRecord::Migration[6.0]
+  drop_table :payments
   def change
     create_table :payments do |t|
       t.string :address
