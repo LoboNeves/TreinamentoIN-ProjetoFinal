@@ -4,7 +4,7 @@ class SignInController < ApplicationController
     @user = @user&.authenticate(params[:password])
     if @user
       token = JsonWebToken.encode(@user)
-      render json: {token: token}
+      render json: {token: token, user: @user}
     else
       render json: {error: "Acesso não autorizado"}, status: 422
     end
