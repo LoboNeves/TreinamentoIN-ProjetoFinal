@@ -5,7 +5,6 @@ class CreatePayments < ActiveRecord::Migration[6.0]
       t.string :payment_information
       t.string :summary
       t.string :calculation
-      t.string :total_price
 
       t.timestamps
     end
