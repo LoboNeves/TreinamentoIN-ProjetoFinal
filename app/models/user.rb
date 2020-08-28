@@ -7,7 +7,6 @@ class User < ApplicationRecord
     #Diferenciação dos tipos de usuário
     enum kind: {
         admin: 0,
-        client: 1,
-        guest: 2
+        client: 1
     }
 end
