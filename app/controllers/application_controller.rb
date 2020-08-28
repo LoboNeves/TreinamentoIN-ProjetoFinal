@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
         if current_user.present?
             render json: {message: 'Está logado'}
         else
-            render json: {message: 'Não está logado'}
+            render json: {message: 'Não está logado'}, status: 404
         end
     end
 end

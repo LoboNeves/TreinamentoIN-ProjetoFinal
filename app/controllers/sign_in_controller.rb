@@ -6,7 +6,7 @@ class SignInController < ApplicationController
       token = JsonWebToken.encode(@user)
       render json: {token: token}
     else
-      render json: {error: "Acesso não autorizado"}
+      render json: {error: "Acesso não autorizado"}, status: 422
     end
   end
 end
