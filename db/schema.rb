@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_28_144456) do
+ActiveRecord::Schema.define(version: 2020_08_28_201621) do
 
   create_table "carts", force: :cascade do |t|
     t.string "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_08_28_144456) do
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "like"
+    t.integer "like"
     t.string "image"
     t.string "name"
     t.float "price"
